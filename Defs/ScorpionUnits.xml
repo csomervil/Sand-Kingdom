@@ -14,9 +14,9 @@
 
   <PawnKindDef ParentName="ScorpBase">
     <race>SandShifterRace</race>
-    <defName>Scorp</defName>
+    <defName>Scorp_Shifter</defName>
     <label>scorp</label>
-    <combatPower>45</combatPower>
+    <combatPower>65</combatPower>
     <isFighter>true</isFighter>
     <initialWillRange>0~1</initialWillRange>
     <initialResistanceRange>10~17</initialResistanceRange>
@@ -24,9 +24,9 @@
 
   <PawnKindDef ParentName="ScorpBase">
     <race>SandZealotRace</race>
-    <defName>Scorp_Guard</defName>
-    <label>scorp guard</label>
-    <combatPower>60</combatPower>
+    <defName>Scorp_Zealot</defName>
+    <label>scorp zealot</label>
+    <combatPower>10</combatPower>
     <isFighter>true</isFighter>
     <initialWillRange>1~3</initialWillRange>
     <initialResistanceRange>15~24</initialResistanceRange>
@@ -34,8 +34,8 @@
 
   <PawnKindDef ParentName="ScorpBase">
     <race>SandPikemanRace</race>
-    <defName>Town_Trader</defName>
-    <label>town trader</label>
+    <defName>Scorp_Pike</defName>
+    <label>scorp pikeman</label>
     <trader>true</trader>
     <combatPower>45</combatPower>
     <isFighter>true</isFighter>
@@ -45,15 +45,25 @@
 
   <PawnKindDef ParentName="ScorpBase">
     <race>SandSupportRace</race>
-    <defName>Town_Scorpman</defName>
-    <label>town scorpman</label>
+    <defName>Supp_Scorp</defName>
+    <label>support scorp</label>
     <labelPlural>town scorpmen</labelPlural>
-    <combatPower>40</combatPower>
+    <combatPower>80</combatPower>
     <factionLeader>true</factionLeader>
     <minGenerationAge>30</minGenerationAge>
     <isFighter>true</isFighter>
     <initialWillRange>3~5</initialWillRange>
     <initialResistanceRange>7~11</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="ScorpBase">
+    <race>SandKingRace</race>
+    <defName>Sand_King</defName>
+    <label>sand king</label>
+    <combatPower>105</combatPower>
+    <isFighter>true</isFighter>
+    <initialWillRange>0~1</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
   </PawnKindDef>
 
   

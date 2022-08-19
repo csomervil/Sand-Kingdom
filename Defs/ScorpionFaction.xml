@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-    <FactionDef Name="FactionBase" Abstract="True">
-    <raidLootValueFromPointsCurve>
-      <points>
-        <li>(35,     15)</li>
-        <li>(100,   120)</li>
-        <li>(1000,  500)</li>
-        <li>(2000,  800)</li>
-        <li>(4000, 1000)</li>
-      </points>
-    </raidLootValueFromPointsCurve>
-  </FactionDef>
-
   <FactionDef ParentName="FactionBase" Name="ScorpFactionBase" Abstract="True">
     <pawnSingular>scorp</pawnSingular>
     <pawnsPlural>scorps</pawnsPlural>
@@ -31,7 +18,6 @@
     <allowedCultures><li>Rustican</li></allowedCultures>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
     </disallowedMemes>
     <structureMemeWeights>
@@ -60,18 +46,18 @@
     </backstoryFilters>
     <geneticVariance>0.8</geneticVariance>
     <caravanTraderKinds>
-      <li>Caravan_Outlander_BulkGoods</li>
-      <li>Caravan_Outlander_CombatSupplier</li>
-      <li>Caravan_Outlander_Exotic</li>
-      <li>Caravan_Outlander_PirateMerchant</li>
+      <li>Caravan_Scorp_BulkGoods</li>
+      <li>Caravan_Scorp_CombatSupplier</li>
+      <li>Caravan_Scorp_Exotic</li>
+      <li>Caravan_Scorp_PirateMerchant</li>
     </caravanTraderKinds>
     <visitorTraderKinds>
-      <li>Visitor_Outlander_Standard</li>
+      <li>Visitor_Scorp_Standard</li>
     </visitorTraderKinds>
     <baseTraderKinds>
-      <li>Base_Outlander_Standard</li>
+      <li>Base_Scorp_Standard</li>
     </baseTraderKinds>
-    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <allowedArrivalTemperatureRange>15~65</allowedArrivalTemperatureRange>
     <raidLootMaker>ScorpRaidLootMaker</raidLootMaker>
     <maxPawnCostPerTotalPointsCurve>
       <points>
@@ -83,28 +69,61 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
-      <li>
-        <!-- Normal fights, standard mix -->
+    <li>
+        <!-- Bigger fights, mix with non-king units -->
         <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
         <options>
-          <Scorp>5</Scorp>
-          <Scorp_Guard>10</Scorp_Guard>
-          <Grenadier_Destructive>1.5</Grenadier_Destructive>
-          <Town_Scorpman>10</Town_Scorpman>
+          <Scorp_Shifter>5</Scorp_Shifter>
+          <Supp_Scorp>5</Supp_Scorp>
+          <Scorp_Zealot>15</Scorp_Zealot>
+          <Scorp_Pike>12</Scorp_Pike>
         </options>
       </li>
       <li>
+        <!-- Normal fights, Zealot/Pikeman -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Scorp_Zealot>10</Scorp_Zealot>
+          <Scorp_Pike>10</Scorp_Pike>
+        </options>
+      </li>
+      <li>
+        <!-- Samller fights, Zealot/Pikeman/Other -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Scorp_Zealot>5</Scorp_Zealot>
+          <Scorp_Pike>5</Scorp_Pike>
+          <Scorp_Shifter>2</Scorp_Shifter>
+          <Supp_Scorp>5</Supp_Scorp>
+      </options>
+      </li>
+      <li>
+        <!-- king fight -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <Scorp_Shifter>5</Scorp_Shifter>
+          <Supp_Scorp>5</Supp_Scorp>
+          <Scorp_Zealot>15</Scorp_Zealot>
+          <Scorp_Pike>12</Scorp_Pike>
+          <Sand_King>1</Sand_King>
+      </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
         <kindDef>Peaceful</kindDef>
         <options>
-          <Scorp>20</Scorp>
-          <Scorp_Guard>10</Scorp_Guard>
-          <Town_Scorpman>10</Town_Scorpman>
+          <Scorp_Zealot>15</Scorp_Zealot>
+          <Scorp_Pike>12</Scorp_Pike>
         </options>
       </li>
       <li>
         <kindDef>Trader</kindDef>
         <traders>
-          <Town_Trader>1</Town_Trader>
+          <Scorp_Pike>1</Scorp_Pike>
         </traders>
         <carriers>
           <Muffalo>6</Muffalo>
@@ -113,15 +132,15 @@
           <Elephant>1</Elephant>
         </carriers>
         <guards>
-          <Scorp>3</Scorp>
+          <Scorp_Zealot>3</Scorp_Zealot>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-          <Scorp>10</Scorp>
-          <Scorp_Guard>10</Scorp_Guard>
-          <Town_Scorpman>10</Town_Scorpman>
+          <Scorp_Zealot>10</Scorp_Zealot>
+          <Scorp_Pike>10</Scorp_Pike>
+          <Supp_Scorp>5</Supp_Scorp>
         </options>
       </li>
       <li MayRequire="Ludeon.RimWorld.Ideology">
@@ -175,7 +194,7 @@
   <FactionDef ParentName="ScorpFactionBase">
     <defName>ScorpCivil</defName>
     <label>civil scorp union</label>
-    <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group holds civil behavior in high regard.</description>
+    <description>They are friendly.</description>
     <colorSpectrum>
       <li>(0.35, 0.30, 0.60)</li>
       <li>(0.45, 0.40, 0.90)</li>
@@ -183,12 +202,15 @@
     <classicIdeo>true</classicIdeo>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>10</configurationListOrderPriority>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </requiredMemes>
   </FactionDef>
 
   <FactionDef ParentName="ScorpFactionBase">
     <defName>ScorpRough</defName>
     <label>rough scorp union</label>
-    <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group has a streak of barbarity in them.</description>
+    <description>They will spread until the sands reach your shores, and then they will spread some more.</description>
     <colorSpectrum>
       <li>(0, 0.4, 0.94)</li>
       <li>(0.64, 0.8, 1)</li>
@@ -196,6 +218,7 @@
     <naturalEnemy>true</naturalEnemy>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
     </requiredMemes>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>20</configurationListOrderPriority>
