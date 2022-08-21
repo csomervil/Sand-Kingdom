@@ -21,7 +21,7 @@
         </capacities>
         <power>22.2</power>
         <cooldownTime>3</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <linkedBodyPartsGroup>RightPincer</linkedBodyPartsGroup>
       </li>
       <li>
         <label>left claw</label>
@@ -30,19 +30,7 @@
         </capacities>
         <power>22.2</power>
         <cooldownTime>3</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <label>teeth</label>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>15.5</power>
-        <cooldownTime>4</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
-        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
-        <chanceFactor>0.2</chanceFactor>
+        <linkedBodyPartsGroup>LeftPincer</linkedBodyPartsGroup>
       </li>
       <li>
         <label>head</label>
@@ -64,7 +52,7 @@
       <lifeExpectancy>180</lifeExpectancy>
       <leatherDef>Leather_Human</leatherDef>
       <nameCategory>HumanStandard</nameCategory>
-      <body>Human</body>
+      <body>Scorp</body>
       <baseBodySize>1</baseBodySize>
       <baseHealthScale>1.2</baseHealthScale>
       <foodType>OmnivoreHuman</foodType>

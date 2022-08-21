@@ -15,7 +15,7 @@
   <PawnKindDef ParentName="ScorpBase">
     <race>SandShifterRace</race>
     <defName>Scorp_Shifter</defName>
-    <label>scorp</label>
+    <label>scorp shifter</label>
     <combatPower>65</combatPower>
     <isFighter>true</isFighter>
     <initialWillRange>0~1</initialWillRange>
