@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase" Name="ScorpFactionBase" Abstract="True">
+    <pawnSingular>scorp</pawnSingular>
+    <pawnsPlural>scorps</pawnsPlural>
+    <categoryTag>Scorp</categoryTag>
+    <listOrderPriority>30</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>prime councilor</leaderTitle>
+    <techLevel>Industrial</techLevel>
+    <factionNameMaker>NamerFactionScorp</factionNameMaker>
+    <settlementNameMaker>NamerSettlementScorp</settlementNameMaker>
+    <allowedCultures><li>Rustican</li></allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </requiredMemes>
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>0.8</geneticVariance>
+    <caravanTraderKinds>
+      <li>Caravan_Scorp_BulkGoods</li>
+      <li>Caravan_Scorp_CombatSupplier</li>
+      <li>Caravan_Scorp_Exotic</li>
+      <li>Caravan_Scorp_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Scorp_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Scorp_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>15~65</allowedArrivalTemperatureRange>
+    <raidLootMaker>ScorpRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+    <li>
+        <!-- Bigger fights, mix with non-king units -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Scorp_Shifter>5</Scorp_Shifter>
+          <Supp_Scorp>5</Supp_Scorp>
+          <Scorp_Zealot>15</Scorp_Zealot>
+          <Scorp_Pike>12</Scorp_Pike>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, Zealot/Pikeman -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Scorp_Zealot>10</Scorp_Zealot>
+          <Scorp_Pike>10</Scorp_Pike>
+        </options>
+      </li>
+      <li>
+        <!-- Samller fights, Zealot/Pikeman/Other -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Scorp_Zealot>5</Scorp_Zealot>
+          <Scorp_Pike>5</Scorp_Pike>
+          <Scorp_Shifter>2</Scorp_Shifter>
+          <Supp_Scorp>5</Supp_Scorp>
+      </options>
+      </li>
+      <li>
+        <!-- king fight -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <Scorp_Shifter>5</Scorp_Shifter>
+          <Supp_Scorp>5</Supp_Scorp>
+          <Scorp_Zealot>15</Scorp_Zealot>
+          <Scorp_Pike>12</Scorp_Pike>
+          <Sand_King>1</Sand_King>
+      </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Scorp_Zealot>15</Scorp_Zealot>
+          <Scorp_Pike>12</Scorp_Pike>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Scorp_Pike>1</Scorp_Pike>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <Scorp_Zealot>3</Scorp_Zealot>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Scorp_Zealot>10</Scorp_Zealot>
+          <Scorp_Pike>10</Scorp_Pike>
+          <Supp_Scorp>5</Supp_Scorp>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+  
+  <ThingSetMakerDef>
+    <defName>ScorpRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>MedicineIndustrial</li>
+            <li>ComponentIndustrial</li>
+            <li>MealSurvivalPack</li>
+            <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+  
+  <FactionDef ParentName="ScorpFactionBase">
+    <defName>ScorpCivil</defName>
+    <label>civil scorp union</label>
+    <description>They are friendly.</description>
+    <colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <classicIdeo>true</classicIdeo>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>10</configurationListOrderPriority>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </requiredMemes>
+  </FactionDef>
+
+  <FactionDef ParentName="ScorpFactionBase">
+    <defName>ScorpRough</defName>
+    <label>rough scorp union</label>
+    <description>They will spread until the sands reach your shores, and then they will spread some more.</description>
+    <colorSpectrum>
+      <li>(0, 0.4, 0.94)</li>
+      <li>(0.64, 0.8, 1)</li>
+    </colorSpectrum>
+    <naturalEnemy>true</naturalEnemy>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </requiredMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>20</configurationListOrderPriority>
+  </FactionDef>
+
+</Defs>
