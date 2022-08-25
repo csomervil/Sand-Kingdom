@@ -19,7 +19,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8.2</power>
+        <power>5.2</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>LeftPincer</linkedBodyPartsGroup>
         <surpriseAttack>
@@ -36,7 +36,7 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8.2</power>
+        <power>5.2</power>
         <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>RightPincer</linkedBodyPartsGroup>
         <chanceFactor>0.2</chanceFactor>
@@ -44,7 +44,7 @@
           <extraMeleeDamages>
             <li>
               <def>Stun</def>
-              <amount>14</amount>
+              <amount>6.5</amount>
             </li>
           </extraMeleeDamages>
         </surpriseAttack>
@@ -63,7 +63,7 @@
       <li>
         <label>tail</label>
         <capacities>
-          <li>Scratch</li>
+          <li>ScorpToxin</li>
         </capacities>
         <power>3.2</power>
         <cooldownTime>2</cooldownTime>

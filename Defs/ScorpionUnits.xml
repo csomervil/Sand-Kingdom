@@ -39,6 +39,11 @@
     <trader>true</trader>
     <combatPower>45</combatPower>
     <isFighter>true</isFighter>
+    <gearHealthRange>0.2~2.0</gearHealthRange>
+    <weaponMoney>150~150</weaponMoney>
+    <weaponTags>
+      <li>NeolithicMeleeDecent</li>
+    </weaponTags>
     <initialWillRange>2~4</initialWillRange>
     <initialResistanceRange>12~20</initialResistanceRange>
   </PawnKindDef>

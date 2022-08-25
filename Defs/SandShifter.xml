@@ -17,12 +17,11 @@
       <li>
         <label>left claw</label>
         <capacities>
-          <li>Scratch</li>
+          <li>Blunt</li>
         </capacities>
         <power>4</power>
         <cooldownTime>0.75</cooldownTime>
         <linkedBodyPartsGroup>LeftPincer</linkedBodyPartsGroup>
-        <chanceFactor>0.25</chanceFactor>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -33,14 +32,13 @@
         </surpriseAttack>
       </li>
       <li>
-        <label>Tail</label>
+        <label>tail</label>
         <capacities>
-          <li>Scratch</li>
+          <li>ScorpToxin</li>
         </capacities>
         <power>3</power>
         <cooldownTime>0.75</cooldownTime>
         <linkedBodyPartsGroup>Telson_Stinger</linkedBodyPartsGroup>
-        <chanceFactor>0.25</chanceFactor>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -50,17 +48,7 @@
           </extraMeleeDamages>
         </surpriseAttack>
       </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.05</chanceFactor>
-      </li>
+  
     </tools>
     <race>
       <thinkTreeMain>Humanlike</thinkTreeMain>
