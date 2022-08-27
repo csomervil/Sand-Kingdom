@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>Scorp_Spear_Wind</defName>  
+    <context>MapOnly</context>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Ambience/Wind/Amb_Wind_Altitude1_Loop</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>18.09319~12.58423</volumeRange>      
+        <pitchRange>1.153763~1.265591</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

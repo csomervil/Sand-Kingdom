@@ -16,23 +16,13 @@
     <factionNameMaker>NamerFactionScorp</factionNameMaker>
     <settlementNameMaker>NamerSettlementScorp</settlementNameMaker>
     <allowedCultures><li>Rustican</li></allowedCultures>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+    </requiredMemes>
     <disallowedMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
     </disallowedMemes>
-    <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
-    </requiredMemes>
-    <structureMemeWeights>
-      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
-      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
-      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
-      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
-      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
-      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
-      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
-      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
-    </structureMemeWeights>
     <backstoryFilters>
       <li>
         <categories>
@@ -205,9 +195,6 @@
     <classicIdeo>true</classicIdeo>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>10</configurationListOrderPriority>
-    <requiredMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
-    </requiredMemes>
   </FactionDef>
 
   <FactionDef ParentName="ScorpFactionBase">
@@ -221,7 +208,6 @@
     <naturalEnemy>true</naturalEnemy>
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
     </requiredMemes>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <configurationListOrderPriority>20</configurationListOrderPriority>

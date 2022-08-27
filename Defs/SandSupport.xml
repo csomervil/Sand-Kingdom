@@ -10,7 +10,7 @@
       <MoveSpeed>6.6</MoveSpeed>
       <ComfyTemperatureMin>16</ComfyTemperatureMin>
       <ComfyTemperatureMax>66</ComfyTemperatureMax>
-      <LeatherAmount>75</LeatherAmount>
+      <LeatherAmount>125</LeatherAmount>
       <RoyalFavorValue>3</RoyalFavorValue>
     </statBases>
     <tools>
@@ -50,7 +50,7 @@
       <intelligence>Humanlike</intelligence>
       <makesFootprints>true</makesFootprints>
       <lifeExpectancy>180</lifeExpectancy>
-      <leatherDef>Leather_Human</leatherDef>
+      <leatherDef>Leather_Scorp_Support</leatherDef>
       <nameCategory>HumanStandard</nameCategory>
       <body>Scorp</body>
       <baseBodySize>1</baseBodySize>
@@ -83,11 +83,11 @@
         </li>
         <li>
           <def>HumanlikeTeenager</def>
-          <minAge>13</minAge>
+          <minAge>16</minAge>
         </li>
         <li>
           <def>HumanlikeAdult</def>
-          <minAge>18</minAge>
+          <minAge>28</minAge>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -127,7 +127,7 @@
     </recipes>
     <ingredient>
       <mergeCompatibilityTags>
-        <li>HumanMeat</li>
+        <li>InsectMeat</li>
       </mergeCompatibilityTags>
     </ingredient>
   </ThingDef>
